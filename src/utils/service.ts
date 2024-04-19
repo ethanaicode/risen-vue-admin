@@ -18,7 +18,7 @@ function createService() {
   service.interceptors.request.use(
     (config) => config,
     // 发送失败
-    (error) => Promise.reject(error),
+    (error) => Promise.reject(error)
   );
   // 响应拦截（可根据具体业务作出相应的调整）
   service.interceptors.response.use(
@@ -92,7 +92,7 @@ function createService() {
       }
       ElMessage.error(error.message);
       return Promise.reject(error);
-    },
+    }
   );
   return service;
 }

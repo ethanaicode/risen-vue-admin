@@ -1,17 +1,17 @@
 <script lang="ts" setup>
-import { ref } from "vue"
-import { Setting } from "@element-plus/icons-vue"
+import { ref } from "vue";
+import { Setting } from "@element-plus/icons-vue";
 
 interface Props {
-  buttonTop?: number
+  buttonTop?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  buttonTop: 350
-})
+  buttonTop: 350,
+});
 
-const buttonTopCss = props.buttonTop + "px"
-const show = ref(false)
+const buttonTopCss = props.buttonTop + "px";
+const show = ref(false);
 </script>
 
 <template>
@@ -21,7 +21,7 @@ const show = ref(false)
     </el-icon>
   </div>
   <el-drawer v-model="show" size="300px" :with-header="false">
-    <slot />
+    <slot>This is default slot</slot>
   </el-drawer>
 </template>
 

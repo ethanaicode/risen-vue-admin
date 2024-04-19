@@ -1,14 +1,18 @@
 <script lang="ts" setup>
-import { useLayoutMode } from "@/hooks/useLayoutMode"
-import { LayoutModeEnum } from "@/constants/app-key"
+import { useLayoutMode } from "@/hooks/useLayoutMode";
+import { LayoutModeEnum } from "@/constants/app-key";
 
-const { isLeft, isTop, isLeftTop, setLayoutMode } = useLayoutMode()
+const { isLeft, isTop, isLeftTop, setLayoutMode } = useLayoutMode();
 </script>
 
 <template>
   <div class="select-layout-mode">
     <el-tooltip content="左侧模式">
-      <el-container class="layout-mode left" :class="{ active: isLeft }" @click="setLayoutMode(LayoutModeEnum.Left)">
+      <el-container
+        class="layout-mode left"
+        :class="{ active: isLeft }"
+        @click="setLayoutMode(LayoutModeEnum.Left)"
+      >
         <el-aside />
         <el-container>
           <el-header />
@@ -17,7 +21,11 @@ const { isLeft, isTop, isLeftTop, setLayoutMode } = useLayoutMode()
       </el-container>
     </el-tooltip>
     <el-tooltip content="顶部模式">
-      <el-container class="layout-mode top" :class="{ active: isTop }" @click="setLayoutMode(LayoutModeEnum.Top)">
+      <el-container
+        class="layout-mode top"
+        :class="{ active: isTop }"
+        @click="setLayoutMode(LayoutModeEnum.Top)"
+      >
         <el-header />
         <el-main />
       </el-container>

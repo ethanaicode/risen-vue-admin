@@ -47,7 +47,7 @@ const promoteRouteLevel = (route: RouteRecordRaw) => {
   router = null;
   // 转为二级路由后，去除所有子路由中的 children
   route.children = route.children?.map(
-    (item) => omit(item, "children") as RouteRecordRaw,
+    (item) => omit(item, "children") as RouteRecordRaw
   );
 };
 
@@ -55,7 +55,7 @@ const promoteRouteLevel = (route: RouteRecordRaw) => {
 const addToChildren = (
   routes: RouteRecordNormalized[],
   children: RouteRecordRaw[],
-  routeModule: RouteRecordRaw,
+  routeModule: RouteRecordRaw
 ) => {
   children.forEach((child) => {
     const route = routes.find((item) => item.name === child.name);

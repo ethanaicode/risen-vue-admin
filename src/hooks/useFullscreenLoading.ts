@@ -12,7 +12,7 @@ interface LoadingInstance {
 interface UseFullscreenLoading {
   <T extends (...args: any[]) => ReturnType<T>>(
     fn: T,
-    options?: LoadingOptions,
+    options?: LoadingOptions
   ): (...args: Parameters<T>) => Promise<ReturnType<T>>;
 }
 
@@ -24,7 +24,7 @@ interface UseFullscreenLoading {
  */
 export const useFullscreenLoading: UseFullscreenLoading = (
   fn,
-  options = {},
+  options = {}
 ) => {
   let loadingInstance: LoadingInstance;
   return async (...args) => {

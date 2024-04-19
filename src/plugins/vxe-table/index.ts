@@ -1,10 +1,10 @@
-import { type App } from "vue"
+import { type App } from "vue";
 // https://vxetable.cn/#/table/start/install
-import VXETable from "vxe-table"
+import VXETable from "vxe-table";
 // https://github.com/x-extends/vxe-table-plugin-element
-import VXETablePluginElement from "vxe-table-plugin-element"
+import VXETablePluginElement from "vxe-table-plugin-element";
 
-VXETable.use(VXETablePluginElement)
+VXETable.use(VXETablePluginElement);
 
 /** 全局默认参数 */
 VXETable.config({
@@ -27,15 +27,15 @@ VXETable.config({
     emptyText: "暂无数据",
     rowConfig: {
       isHover: true,
-      isCurrent: true
+      isCurrent: true,
     },
     columnConfig: {
-      resizable: false
+      resizable: false,
     },
     align: "center",
     headerAlign: "center",
     /** 行数据的唯一主键字段名 */
-    rowId: "_VXE_ID"
+    rowId: "_VXE_ID",
   },
   pager: {
     // size: "medium",
@@ -44,7 +44,16 @@ VXETable.config({
     pageSize: 10,
     pagerCount: 7,
     pageSizes: [10, 20, 50],
-    layouts: ["Total", "PrevJump", "PrevPage", "Number", "NextPage", "NextJump", "Sizes", "FullJump"]
+    layouts: [
+      "Total",
+      "PrevJump",
+      "PrevPage",
+      "Number",
+      "NextPage",
+      "NextJump",
+      "Sizes",
+      "FullJump",
+    ],
   },
   modal: {
     minWidth: 500,
@@ -56,11 +65,11 @@ VXETable.config({
     dblclickZoom: false,
     showTitleOverflow: true,
     transfer: true,
-    draggable: false
-  }
-})
+    draggable: false,
+  },
+});
 
 export function loadVxeTable(app: App) {
   /** Vxe Table 组件完整引入 */
-  app.use(VXETable)
+  app.use(VXETable);
 }

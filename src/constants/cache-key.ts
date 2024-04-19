@@ -1,4 +1,4 @@
-const SYSTEM_NAME = "risen-admin";
+const SYSTEM_NAME = "risen-vue-admin";
 
 /** 缓存数据时用到的 Key */
 class CacheKey {

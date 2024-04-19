@@ -64,10 +64,12 @@ module.exports = {
       },
     ],
     // Prettier
+    // trailingComma: "es5" - Include trailing commas wherever possible but not include them in function arguments.
     "prettier/prettier": [
       "error",
       {
         endOfLine: "auto",
+        trailingComma: "es5",
       },
     ],
   },

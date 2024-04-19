@@ -1,7 +1,7 @@
 <template>
   <div class="error-page">
     <div class="error-page-svg">
-      <slot />
+      <slot>Default Error Page</slot>
     </div>
     <router-link to="/">
       <el-button type="primary">回到首页</el-button>

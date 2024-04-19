@@ -3,14 +3,14 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es6: true
+    es6: true,
   },
   extends: [
     "plugin:vue/vue3-essential",
     "eslint:recommended",
     "@vue/typescript/recommended",
     "@vue/prettier",
-    "@vue/eslint-config-typescript"
+    "@vue/eslint-config-typescript",
   ],
   parser: "vue-eslint-parser",
   parserOptions: {
@@ -20,8 +20,8 @@ module.exports = {
     jsxPragma: "React",
     ecmaFeatures: {
       jsx: true,
-      tsx: true
-    }
+      tsx: true,
+    },
   },
   rules: {
     // TS
@@ -36,15 +36,15 @@ module.exports = {
       "error",
       {
         argsIgnorePattern: "^_",
-        varsIgnorePattern: "^_"
-      }
+        varsIgnorePattern: "^_",
+      },
     ],
     "no-unused-vars": [
       "error",
       {
         argsIgnorePattern: "^_",
-        varsIgnorePattern: "^_"
-      }
+        varsIgnorePattern: "^_",
+      },
     ],
     // Vue
     "vue/no-v-html": "off",
@@ -57,18 +57,18 @@ module.exports = {
         html: {
           void: "always",
           normal: "always",
-          component: "always"
+          component: "always",
         },
         svg: "always",
-        math: "always"
-      }
+        math: "always",
+      },
     ],
     // Prettier
     "prettier/prettier": [
       "error",
       {
-        endOfLine: "auto"
-      }
-    ]
-  }
-}
+        endOfLine: "auto",
+      },
+    ],
+  },
+};
